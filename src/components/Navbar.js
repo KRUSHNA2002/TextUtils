@@ -16,7 +16,7 @@
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             {/* <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link> */}
-            <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
           </li>
           <li className="nav-item">
             {/* <Link className="nav-link" to="/about">{props.about}</Link> */}
