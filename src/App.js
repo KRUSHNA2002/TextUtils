@@ -25,27 +25,27 @@ function App(props) {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert('Dark mode is on', 'success');
-      document.title = 'Textutils - Dark mode ';
+      // document.title = 'Textutils - Dark mode ';
     } else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert('Light mode is on', 'success');
-      document.title = 'Textutils - Light mode ';
+      // document.title = 'Textutils - Light mode ';
     }
   };
 
   return (
     <>
       {/* <Router> */}
-        <Navbar title="Textutils" about="about text" mode={mode} toggleMode={toggleMode} />
+        <Navbar title="Textutils" about="about" mode={mode} toggleMode={toggleMode} />
         <div>
           <Alert alert={alert} />
         </div>
         <div className="container my-3">
-          {/* <Routes>
-            <Route path="/about" element={<About />} /> */}
-            {/* <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} /> */}
-            <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
+          {/* <Routes> */}
+            {/* <Route path="/about" element={<About mode={mode} />} /> */}
+            {/* <Route path="/" element={<TextForm showAlert={showAlert} heading="Try Textutils - word counter , character counter " mode={mode} />} /> */}
+            <TextForm showAlert={showAlert} mode={mode} heading="Try Textutils - word counter , character counter "  />
           {/* </Routes> */}
         </div>
       {/* </Router> */}
