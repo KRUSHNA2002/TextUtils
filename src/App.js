@@ -19,7 +19,7 @@ function App(props) {
       setAlert();
     }, 1500);
   };
-
+  
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark');
