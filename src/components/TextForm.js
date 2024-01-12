@@ -62,18 +62,18 @@ export default function TextForm(props) {
         <div className="mb-3">
             <textarea className="form-control" id="mybox" style={{backgroundColor:props.mode === "dark"?"#2a475fbd":"white",color:props.mode === "dark"?"white":"black"}} value={text} onChange={handupChange} rows="9"></textarea>
         </div>
-        <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handupClick}>convert to uppercase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-4" onClick={handupClick}>convert to uppercase</button>
    
-        <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handlowerClick}>convert to lowercase</button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handclearClick}>Clear all</button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={camelCase}>convert to camel case</button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handCopy}>Copy Text</button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handExtraSpace}>Remove Extra Space</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-4" onClick={handlowerClick}>convert to lowercase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-4" onClick={handclearClick}>Clear all</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-4" onClick={camelCase}>convert to camel case</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-4" onClick={handCopy}>Copy Text</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-4" onClick={handExtraSpace}>Remove Extra Space</button>
     </div>
     
     <div className="container my-4" style={{color:props.mode === "light"?"black":"white"}}>
         <h2>Text Summary</h2>
-        <p>{text.split(' ').filter((element)=>{return element.length!==0}).length} word and {text.length} character </p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} word and {text.length} character </p>
 
         <p>{0.008 * text.split(' ').filter((element)=>{return element.length!==0}).length } Minutes to read</p>
          
